@@ -130,6 +130,7 @@ const getNodeMailer = (req,res) => {
     transporter.sendMail(mailOptions)
     .then((response)=>{
         console.log(response);
+        res.send({response});
     })
     .catch((error)=>{
         console.log(error);
