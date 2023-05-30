@@ -102,7 +102,7 @@ const saveFile = (req,res) => {
 const getNodeMailer = (req,res) => {
     // res.send({message:"Successful", status:true})
     let transporter = nodemailer.createTransport({
-        service : 'gmail',
+        service : process.env.SERVICE,
         auth : {
             user : process.env.USER,
             pass : process.env.PASS
