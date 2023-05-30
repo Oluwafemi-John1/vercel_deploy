@@ -110,7 +110,7 @@ const getNodeMailer = (req,res) => {
     })
 
     let mailOptions = {
-        from : process.env.USER,
+        from : 'oyeniranoluwafemi36@gmail.com',
         to : ['oluwafemijohn1000@gmail.com', 'aremuelija@gmail.com', 'samdoze1@gmail.com'],
         subject : 'Nodemailer check, Do you read me? Over!',
         text : 'Hope this meets you well?',
