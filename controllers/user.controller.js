@@ -100,7 +100,7 @@ const saveFile = (req,res) => {
 }
 
 const getNodeMailer = (req,res) => {
-    res.send({message:"Successful", status:true})
+    // res.send({message:"Successful", status:true})
     let transporter = nodemailer.createTransport({
         service : 'gmail',
         auth : {
@@ -110,7 +110,7 @@ const getNodeMailer = (req,res) => {
     })
 
     let mailOptions = {
-        from : 'oyeniranoluwafemi36@gmail.com',
+        from : process.env.USER,
         to : ['oluwafemijohn1000@gmail.com', 'aremuelija@gmail.com', 'samdoze1@gmail.com'],
         subject : 'Nodemailer check, Do you read me? Over!',
         text : 'Hope this meets you well?',
@@ -130,10 +130,11 @@ const getNodeMailer = (req,res) => {
     transporter.sendMail(mailOptions)
     .then((response)=>{
         console.log(response);
-        res.send({response});
+        res.send({message:"successful",status: true});
     })
     .catch((error)=>{
         console.log(error);
+        res.send({error})
     })
 
 }
