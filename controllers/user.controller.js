@@ -114,15 +114,12 @@ const getNodeMailer = (req,res) => {
         to : ['oluwafemijohn1000@gmail.com', 'aremuelija@gmail.com', 'samdoze1@gmail.com'],
         subject : 'Nodemailer check, Do you read me? Over!',
         text : 'Hope this meets you well?',
-        html : "<h1>This is what happens when you use nodemailer</h1>",
+        // html : "<h1>This is what happens when you use nodemailer</h1>",
+        html : "<><h1>Welcome to My Website</h1><p>Check out this amazing image:</p><img src='https://res.cloudinary.com/dxgvsnxsj/image/upload/v1684924549/car.jpg' alt='Image Description'><p>Thanks for visiting!</p></>",
         attachments : [
             {
                 filename : "calculator",
                 path : "https://res.cloudinary.com/dxgvsnxsj/image/upload/v1684921145/calculator.jpg"
-            },
-            {
-                filename : "file.html",
-                path : "index.html"
             }
         ]
     }
